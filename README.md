@@ -1,3 +1,21 @@
+Peercoin Androind Wallet ported from Mycelium Bitcoin Wallet
+============================================================
+
+NOTE: Currently this is still the Bitcoin Android Wallet the Peercoin Wallet is in 
+development.
+
+Please feel free to donate to the development of this application here
+http://peer4commit.com/projects/10
+
+If you are a developer and would like to work on this project then please feel free
+to make pull requests against this repo.  I have an andraoid phone that can be used 
+for testing purposes so please feel free to contact Fuzzybear on
+http://www.peercointalk.org if you would like to discuss further, raise issues 
+here in github or email me through here.
+
+Fuzzybear
+
+
 beta channel
 ============
 to get the latest bleeding edge versions go to 

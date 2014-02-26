@@ -114,8 +114,8 @@ public class ManualAddressEntry extends Activity {
 
          findViewById(R.id.btOk).setEnabled(_address != null);
          boolean addressValid = _address != null;
-         findViewById(R.id.tvBitcoinAddressInvalid).setVisibility(!addressValid ? View.VISIBLE : View.GONE);
-         findViewById(R.id.tvBitcoinAddressValid).setVisibility(addressValid ? View.VISIBLE : View.GONE);
+         findViewById(R.id.tvPeercoinAddressInvalid).setVisibility(!addressValid ? View.VISIBLE : View.GONE);
+         findViewById(R.id.tvPeercoinAddressValid).setVisibility(addressValid ? View.VISIBLE : View.GONE);
          findViewById(R.id.btOk).setEnabled(addressValid);
       }
    };

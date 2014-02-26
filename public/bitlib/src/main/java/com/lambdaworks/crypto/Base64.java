@@ -31,7 +31,7 @@ import java.util.Arrays;
  * format types. The methods not used can simply be commented out.<br><br>
  *
  * There is also a "fast" version of all decode methods that works the same way as the normal ones, but
- * har a few demands on the decoded input. Normally though, these fast versions should be used if the source if
+ * here are a few demands on the decoded input. Normally though, these fast versions should be used if the source if
  * the input is known and it hasn't been tampered with.<br><br>
  *
  * If you find the code useful or you find a bug, please send me a note at base64 @ miginfocom . com.
@@ -508,7 +508,7 @@ public class Base64
         return dArr;
     }
 
-    /** Decodes a BASE64 encoded string that is known to be resonably well formatted. The method is about twice as
+    /** Decodes a BASE64 encoded string that is known to be reasonably well formatted. The method is about twice as
      * fast as {@link #decode(String)}. The preconditions are:<br>
      * + The array must have a line length of 76 chars OR no line separators at all (one line).<br>
      * + Line separator must be "\r\n", as specified in RFC 2045

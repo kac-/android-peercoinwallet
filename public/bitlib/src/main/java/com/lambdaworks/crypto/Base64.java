@@ -32,7 +32,7 @@ import java.util.Arrays;
  *
  * There is also a "fast" version of all decode methods that works the same way as the normal ones, but
  * har a few demands on the decoded input. Normally though, these fast versions should be used if the source if
- * the input is known and it hasn't bee tampered with.<br><br>
+ * the input is known and it hasn't been tampered with.<br><br>
  *
  * If you find the code useful or you find a bug, please send me a note at base64 @ miginfocom . com.
  *

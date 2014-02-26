@@ -173,7 +173,7 @@
   <string name="bitcoin_address_invalid">比特币地址无效</string>
   <string name="bitcoin_address_valid">比特币地址有效</string>
   <string name="key_management">密钥管理</string>
-  <string name="redirecting_to_blockchain_info">正在重定向到 blockchain.info</string>
+  <string name="redirecting_to_bkchain_org">正在重定向到 bkchain.org</string>
   <string name="tap_to_refresh">点击可刷新</string>
   <string name="using_address_from_clipboard">使用剪贴板中的地址</string>
   <string name="my_addresses">我的地址</string>

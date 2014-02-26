@@ -172,7 +172,7 @@
   <string name="bitcoin_address_invalid">Indirizzo bitcoin non valido</string>
   <string name="bitcoin_address_valid">Indirizzo bitcoin valido</string>
   <string name="key_management">Gestione chiavi</string>
-  <string name="redirecting_to_blockchain_info">Reindirizzamento a blockchain.info</string>
+  <string name="redirecting_to_bkchain_org">Reindirizzamento a bkchain.org</string>
   <string name="tap_to_refresh">Tocca per aggiornare</string>
   <string name="using_address_from_clipboard">Indirizzo copiato dagli appunti in uso</string>
   <string name="my_addresses">I miei indirizzi</string>

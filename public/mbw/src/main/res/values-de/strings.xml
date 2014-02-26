@@ -174,7 +174,7 @@ Schlüsseln und das Ändern des PIN-Codes verbietet
   <string name="bitcoin_address_invalid">Ungültige Bitcoin-Adresse</string>
   <string name="bitcoin_address_valid">Gültige Bitcoin-Adresse</string>
   <string name="key_management">Schlüsselverwaltung</string>
-  <string name="redirecting_to_blockchain_info">Sie werden zu blockchain.info weitergeleitet</string>
+  <string name="redirecting_to_bkchain_org">Sie werden zu bkchain.org weitergeleitet</string>
   <string name="tap_to_refresh">Zum Aktualisieren hier tippen</string>
   <string name="using_address_from_clipboard">Bitcoin-Adresse aus der Zwischenablage wird verwendet</string>
   <string name="my_addresses">Meine Adressen</string>

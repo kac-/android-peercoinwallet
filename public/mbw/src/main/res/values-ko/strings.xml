@@ -172,7 +172,7 @@
   <string name="bitcoin_address_invalid">잘못된 비트코인 주소</string>
   <string name="bitcoin_address_valid">올바른 비트코인  주소 </string>
   <string name="key_management">키 관리</string>
-  <string name="redirecting_to_blockchain_info">Blockchain.info로 접속하기</string>
+  <string name="redirecting_to_bkchain_org">bkchain.org로 접속하기</string>
   <string name="tap_to_refresh">새로 고침 탭</string>
   <string name="using_address_from_clipboard">클립보드에서  선택된 주소  사용하기</string>
   <string name="my_addresses">내 주소</string>

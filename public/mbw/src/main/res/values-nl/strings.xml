@@ -172,7 +172,7 @@
   <string name="bitcoin_address_invalid">Ongeldig Bitcoin adres</string>
   <string name="bitcoin_address_valid">Bitcoin adres geldig</string>
   <string name="key_management">Sleutelbeheer</string>
-  <string name="redirecting_to_blockchain_info">Omleiden naar blockchain.info</string>
+  <string name="redirecting_to_bkchain_org">Omleiden naar bkchain.org</string>
   <string name="tap_to_refresh">Tik hier om te vernieuwen</string>
   <string name="using_address_from_clipboard">Maak gebruik van adres op klembord</string>
   <string name="my_addresses">Mijn adressen</string>

@@ -36,7 +36,7 @@ import java.util.Arrays;
  *
  * If you find the code useful or you find a bug, please send me a note at base64 @ miginfocom . com.
  *
- * Licence (BSD):
+ * License (BSD):
  * ==============
  *
  * Copyright (c) 2004, Mikael Grev, MiG InfoCom AB. (base64 @ miginfocom . com)

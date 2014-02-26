@@ -65,7 +65,7 @@
   <string name="balance">יתרה</string>
   <string name="no_server_connection">לא מוצא את השרת</string>
   <string name="no_network_connection">אין חיבור רשת</string>
-  <string name="invalid_bitcoin_uri">Bitcoin URI בלתי תקין</string>
+  <string name="invalid_bitcoin_uri">Peercoin URI בלתי תקין</string>
   <string name="no_private_key">הארנק שלך אינו יכול לשלוח כסף מכיוון שאין לו מפתחות</string>
   <string name="unrecognized_format">פורמט לא מזוהה</string>
   <string name="unrecognized_format_version">גרסת מפתח לא מזוהה</string>

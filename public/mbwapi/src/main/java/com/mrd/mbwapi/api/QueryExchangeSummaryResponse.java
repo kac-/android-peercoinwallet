@@ -41,7 +41,7 @@ import com.mrd.bitlib.util.ByteWriter;
 public class QueryExchangeSummaryResponse extends ApiObject {
 
    /**
-    * Information about Bitcoin exchange rates from zero or more exchanges for
+    * Information about Peercoin exchange rates from zero or more exchanges for
     * the selected currency
     */
    public ExchangeSummary[] exchangeSummaries;

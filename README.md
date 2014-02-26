@@ -15,17 +15,6 @@ here in github or email me through here.
 
 Fuzzybear
 
-
-beta channel
-============
-to get the latest bleeding edge versions go to 
-
-https://play.google.com/apps/testing/com.mycelium.wallet
-
-to be eligible for testing you need to join the g+ group at 
-
-https://plus.google.com/communities/102264813364583686576
-
 building
 ========
 
@@ -44,7 +33,7 @@ then you need to use the Android SDK manager to install the following components
 
 on the console write
 
-    git clone https://github.com/mycelium-com/wallet.git
+    git clone https://github.com/FuzzyBearBTC/android-peercoinwallet.git
     cd wallet
 
 linux/mac
@@ -58,10 +47,11 @@ in windows:
  - voila, look into wallet/public/mbw/build/apk to see the generated apk. 
    there are versions for prodnet and testnet.
 
-alternatively you can install the latest version from the play store at
+========================================================
 
-https://play.google.com/store/apps/details?id=com.mycelium.wallet
+features bellow are left as reference for the developers
 
+========================================================
 features 
 ========
 

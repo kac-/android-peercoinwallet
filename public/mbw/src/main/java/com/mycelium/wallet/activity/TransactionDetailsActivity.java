@@ -68,8 +68,8 @@ import com.mycelium.wallet.Utils;
 
 public class TransactionDetailsActivity extends Activity {
 
-   private static final String BLOCKCHAIN_INFO_TRANSACTION_LINK_TEMPLATE = "https://blockchain.info/tx/";
-   private static final String BLOCKCHAIN_INFO_ADDRESS_LINK_TEMPLATE = "https://blockchain.info/address/";
+   private static final String BLOCKCHAIN_INFO_TRANSACTION_LINK_TEMPLATE = "http://bkchain.org/ppc/tx/";
+   private static final String BLOCKCHAIN_INFO_ADDRESS_LINK_TEMPLATE = "http://bkchain.org/ppc/address/";
    @SuppressWarnings("deprecation")
    private static final LayoutParams FPWC = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT, 1);
    private static final LayoutParams WCWC = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1);
@@ -246,7 +246,7 @@ public class TransactionDetailsActivity extends Activity {
          Intent intent = new Intent(Intent.ACTION_VIEW);
          intent.setData(Uri.parse(url));
          startActivity(intent);
-         Toast.makeText(TransactionDetailsActivity.this, R.string.redirecting_to_blockchain_info, Toast.LENGTH_SHORT)
+         Toast.makeText(TransactionDetailsActivity.this, R.string.redirecting_to_bkchain_org, Toast.LENGTH_SHORT)
                .show();
 
       }

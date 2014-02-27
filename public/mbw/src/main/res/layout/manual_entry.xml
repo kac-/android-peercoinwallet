@@ -28,7 +28,7 @@
         android:typeface="monospace" />
 
     <TextView
-        android:id="@+id/tvBitcoinAddressValid"
+        android:id="@+id/tvPeercoinAddressValid"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/tvBitcoinAddressInvalid"
+        android:id="@+id/tvPeercoinAddressInvalid"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

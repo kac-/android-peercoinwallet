@@ -5,7 +5,7 @@ NOTE: Currently this is still the Bitcoin Android Wallet the Peercoin Wallet is 
 development.
 
 Please feel free to donate to the development of this application here
-http://peer4commit.com/projects/10
+[![tip for next commit](http://peer4commit.com/projects/10.svg)](http://peer4commit.com/projects/10)
 
 If you are a developer and would like to work on this project then please feel free
 to make pull requests against this repo.  I have an android phone that can be used 

@@ -22,7 +22,7 @@ import java.math.BigInteger;
 import java.math.RoundingMode;
 
 /**
- * a core Bitcoin Value representation, caputuring many domain specific aspects
+ * a core Bitcoin Value representation, capturing many domain specific aspects
  * of it. introduced to reduce the ambiguity when dealing with double,
  * BigInteger, long, or even worse, integer representations
  * 
@@ -46,7 +46,7 @@ public final class Bitcoins implements Serializable {
     * 
     * @param output
     *           Object from BitcoiJ transaction
-    * @return a value prepresentation of a Bitcoin domain object
+    * @return a value pre-presentation of a Bitcoin domain object
     */
    /*
     * public static Bitcoins valueOf(TransactionOutput output) { return
@@ -103,7 +103,7 @@ public final class Bitcoins implements Serializable {
    // if (satoshis != (double) longSatoshis) {
    // double error = longSatoshis - satoshis;
    // throw new IllegalArgumentException("the given double value " + origValue
-   // + " was not convertable to a precise value." + " error: " + error +
+   // + " was not convertible to a precise value." + " error: " + error +
    // " satoshis");
    // }
    // return longSatoshis;

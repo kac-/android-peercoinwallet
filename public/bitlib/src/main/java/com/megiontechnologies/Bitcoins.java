@@ -28,8 +28,10 @@ import java.math.RoundingMode;
  * 
  * @author apetersson
  */
+ 
+/** Original code:
 public final class Bitcoins implements Serializable {
-   private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
    public static final long SATOSHIS_PER_BITCOIN = 100000000L;
    private static final BigDecimal SATOSHIS_PER_BITCOIN_BD = BigDecimal.valueOf(SATOSHIS_PER_BITCOIN);
@@ -39,7 +41,20 @@ public final class Bitcoins implements Serializable {
    public static final String BITCOIN_SYMBOL = "BTC"; // BTC
 
    private final long satoshis;
+ */
+ 
+public final class Peercoins implements Serializable {
+   private static final long serialVersionUID = 1L;
 
+   public static final long PEERS_PER_PEERCOIN = 100000000L;
+   private static final BigDecimal PEERS_PER_PEERCOIN_BD = BigDecimal.valueOf(PEERS_PER_PEERCOIN);
+   private static final long MAX_VALUE = 2000000000 * PEERS_PER_PEERCOIN;
+   // public static final String BITCOIN_SYMBOL = "\u0243"; // Ƀ
+   // public static final String BITCOIN_SYMBOL = "\u0E3F"; // ฿
+   public static final String PEERCOIN_SYMBOL = "PPC"; // PPC
+
+   private final long peers;
+   
    /*    *//**
     * if used properly, also valueOf(input) should be provided ideally,
     * BitcoinJ would already output Bitcoins instead of BigInteger
@@ -61,6 +76,8 @@ public final class Bitcoins implements Serializable {
     *            if the given double value loses precision when converted to
     *            long
     */
+   
+/**    Original Code:
    public static Bitcoins valueOf(double btc) {
       return valueOf(toLongExact(btc));
    }
@@ -89,7 +106,37 @@ public final class Bitcoins implements Serializable {
       long longSatoshis = Math.round(satoshis);
       return longSatoshis;
    }
+*/
 
+   public static Peercoins valueOf(double ppc) {
+      return valueOf(toLongExact(ppc));
+   }
+
+    public static Peercoins valueOf(String ppc) {
+        return Peercoins.valueOf(new BigDecimal(ppc).multiply(PEERS_PER_PEERCOIN_BD).longValueExact());
+    }
+
+    public static Peercoins nearestValue(double v) {
+      return new Peercoins(Math.round(v * PEERS_PER_PEERCOIN));
+   }
+
+   public static Peercoins nearestValue(BigDecimal PeercoinAmount) {
+      BigDecimal peers = peercoinAmount.multiply(PEERSS_PER_PEERCOIN_BD);
+      long peersExact = peers.setScale(0, RoundingMode.HALF_UP).longValueExact();
+      return new Peercoins(peersExact);
+   }
+
+   public static Peercoins valueOf(long peers) {
+      return new Peercoins(peers);
+   }
+
+   private static long toLongExact(double origValue) {
+      double peers = origValue * PEERS_PER_PEERCOIN; // possible loss of
+                                                          // precision here
+      long longPeers = Math.round(peers);
+      return longPeers;
+   }
+   
    /**
     * XXX Jan: Commented out the below as this gives unnecessary runtime faults.
     * There may be rounding errors on the last decimals, and that is how life
@@ -109,6 +156,7 @@ public final class Bitcoins implements Serializable {
    // return longSatoshis;
    // }
 
+/** Original Code:
    private Bitcoins(long satoshis) {
       if (satoshis < 0)
          throw new IllegalArgumentException(String.format("Bitcoin values must be debt-free and positive, but was %s",
@@ -129,7 +177,7 @@ public final class Bitcoins implements Serializable {
 
    @Override
    public String toString() {
-      // this could surely be implemented faster without using BigDecimal. but it
+      // this could surely be implmented faster without using BigDecimal. but it
       // is good enough for now.
       // this could be cached
       return toBigDecimal().toPlainString();
@@ -184,6 +232,101 @@ public final class Bitcoins implements Serializable {
 
    public Bitcoins roundToSignificantFigures(int n) {
       return Bitcoins.valueOf(roundToSignificantFigures(satoshis, n));
+   }
+
+   private static long roundToSignificantFigures(long num, int n) {
+      if (num == 0) {
+         return 0;
+      }
+      // todo check if these are equal, take LongMath
+      // int d = LongMath.log10(Math.abs(num), RoundingMode.CEILING);
+      final double d = Math.ceil(Math.log10(num < 0 ? -num : num));
+      final int power = n - (int) d;
+
+      final double magnitude = Math.pow(10, power);
+      final long shifted = Math.round(num * magnitude);
+      long ret = (long) (shifted / magnitude);
+      return ret;
+   }
+
+}
+*/
+
+   private Peercoins(long peers) {
+      if (peers < 0)
+         throw new IllegalArgumentException(String.format("Peercoin values must be debt-free and positive, but was %s",
+               peers));
+      if (peers >= MAX_VALUE)
+         throw new IllegalArgumentException(String.format(
+               "Peercoin values must be smaller than 2 Billion PPC, but was %s", peers));
+      this.peers = peers;
+   }
+
+   public BigDecimal multiply(BigDecimal pricePerPPC) {
+      return toBigDecimal().multiply(BigDecimal.valueOf(peers));
+   }
+
+    protected Peercoins parse(String input) {
+        return Peercoins.valueOf(input);
+    }
+
+   @Override
+   public String toString() {
+      // this could surely be implented faster without using BigDecimal. but it
+      // is good enough for now.
+      // this could be cached
+      return toBigDecimal().toPlainString();
+   }
+
+   public String toString(int decimals) {
+      // this could surely be implented faster without using BigDecimal. but it
+      // is good enough for now.
+      // this could be cached
+      return toBigDecimal().setScale(decimals, RoundingMode.DOWN).toPlainString();
+   }
+
+   public BigDecimal toBigDecimal() {
+      return BigDecimal.valueOf(peers).divide(PEERS_PER_PEERCOIN_BD);
+   }
+
+   @Override
+   public int hashCode() {
+      return (int) (peers ^ (peers >>> 32));
+   }
+
+   @Override
+   public boolean equals(Object o) {
+      if (this == o)
+         return true;
+      if (o == null || getClass() != o.getClass())
+         return false;
+
+      Peercoins peercoins = (Peercoins) o;
+
+      if (peers != peercoins.peers)
+         return false;
+
+      return true;
+   }
+
+   public BigInteger toBigInteger() {
+      return BigInteger.valueOf(peers);
+   }
+
+   public long getLongValue() {
+      return peers;
+   }
+
+   public String toCurrencyString() {
+      return new StringBuilder().append(PEERCOIN_SYMBOL).append(' ').append(toString()).toString();
+   }
+
+   public String toCurrencyString(int decimals) {
+      return new StringBuilder().append(PEERCOIN_SYMBOL).append(' ').append(toString(decimals)).toString();
+   }
+
+   public Peercoins roundToSignificantFigures(int n) {
+      return Peercoins.valueOf(roundToSignificantFigures(peers, n));
    }
 
    private static long roundToSignificantFigures(long num, int n) {

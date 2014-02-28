@@ -23,7 +23,7 @@ import java.math.RoundingMode;
 
 /**
  * a core Bitcoin Value representation, capturing many domain specific aspects
- * of it. introduced to reduce the ambiguity when dealing with double,
+ * of it. Introduced to reduce the ambiguity when dealing with double,
  * BigInteger, long, or even worse, integer representations
  * 
  * @author apetersson
@@ -44,7 +44,7 @@ public final class Bitcoins implements Serializable {
  */
  
 public final class Peercoins implements Serializable {
-  private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
    public static final long PEERS_PER_PEERCOIN = 100000000L;
    private static final BigDecimal PEERS_PER_PEERCOIN_BD = BigDecimal.valueOf(PEERS_PER_PEERCOIN);
@@ -70,7 +70,7 @@ public final class Peercoins implements Serializable {
 
    /**
     * @param btc
-    *           double Value in full bitcoins. must be an exact represenatation
+    *           double Value in full bitcoins. Must be an exact represenatation
     * @return bitcoin value representation
     * @throws IllegalArgumentException
     *            if the given double value loses precision when converted to
@@ -177,7 +177,7 @@ public final class Peercoins implements Serializable {
 
    @Override
    public String toString() {
-      // this could surely be implented faster without using BigDecimal. but it
+      // this could surely be implmented faster without using BigDecimal. but it
       // is good enough for now.
       // this could be cached
       return toBigDecimal().toPlainString();

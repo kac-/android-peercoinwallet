@@ -22,7 +22,7 @@ import java.math.BigInteger;
 import java.math.RoundingMode;
 
 /**
- * a core Bitcoin Value representation, capturing many domain specific aspects
+ * A core Bitcoin Value representation, capturing many domain specific aspects
  * of it. Introduced to reduce the ambiguity when dealing with double,
  * BigInteger, long, or even worse, integer representations
  * 
@@ -56,7 +56,7 @@ public final class Peercoins implements Serializable {
    private final long peers;
    
    /*    *//**
-    * if used properly, also valueOf(input) should be provided ideally,
+    * If used properly, also valueOf(input) should be provided ideally,
     * BitcoinJ would already output Bitcoins instead of BigInteger
     * 
     * @param output
@@ -177,14 +177,14 @@ public final class Peercoins implements Serializable {
 
    @Override
    public String toString() {
-      // this could surely be implmented faster without using BigDecimal. but it
+      // This could surely be implmented faster without using BigDecimal. But it
       // is good enough for now.
       // this could be cached
       return toBigDecimal().toPlainString();
    }
 
    public String toString(int decimals) {
-      // this could surely be implented faster without using BigDecimal. but it
+      // This could surely be implented faster without using BigDecimal. But it
       // is good enough for now.
       // this could be cached
       return toBigDecimal().setScale(decimals, RoundingMode.DOWN).toPlainString();
@@ -238,7 +238,7 @@ public final class Peercoins implements Serializable {
       if (num == 0) {
          return 0;
       }
-      // todo check if these are equal, take LongMath
+      // Todo check if these are equal, take LongMath
       // int d = LongMath.log10(Math.abs(num), RoundingMode.CEILING);
       final double d = Math.ceil(Math.log10(num < 0 ? -num : num));
       final int power = n - (int) d;
@@ -272,14 +272,14 @@ public final class Peercoins implements Serializable {
 
    @Override
    public String toString() {
-      // this could surely be implented faster without using BigDecimal. but it
+      // This could surely be implented faster without using BigDecimal. But it
       // is good enough for now.
       // this could be cached
       return toBigDecimal().toPlainString();
    }
 
    public String toString(int decimals) {
-      // this could surely be implented faster without using BigDecimal. but it
+      // This could surely be implented faster without using BigDecimal. But it
       // is good enough for now.
       // this could be cached
       return toBigDecimal().setScale(decimals, RoundingMode.DOWN).toPlainString();
@@ -333,7 +333,7 @@ public final class Peercoins implements Serializable {
       if (num == 0) {
          return 0;
       }
-      // todo check if these are equal, take LongMath
+      // Todo check if these are equal, take LongMath
       // int d = LongMath.log10(Math.abs(num), RoundingMode.CEILING);
       final double d = Math.ceil(Math.log10(num < 0 ? -num : num));
       final int power = n - (int) d;

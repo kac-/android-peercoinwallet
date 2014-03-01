@@ -22,7 +22,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Various hashing utilities used in the Bitcoin system.
+ * Various hashing utilities used in the Peercoin system.
  */
 public class HashUtils {
 
@@ -75,10 +75,10 @@ public class HashUtils {
 
    /**
     * Calculate the RipeMd160 value of the SHA-256 of an array of bytes. This is
-    * how a Bitcoin address is derived from public key bytes.
+    * how a Peercoin address is derived from public key bytes.
     *
-    * @param pubkeyBytes A Bitcoin public key as an array of bytes.
-    * @return The Bitcoin address as an array of bytes.
+    * @param pubkeyBytes A Peercoin public key as an array of bytes.
+    * @return The Peercoin address as an array of bytes.
     */
    public static byte[] addressHash(byte[] pubkeyBytes) {
       byte[] sha256 = getSha256Digest().digest(pubkeyBytes);

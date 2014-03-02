@@ -144,6 +144,42 @@ public class Utils {
        */
    }
 
+   public static class PeercoinScanResult {
+      public Address address;
+      public Long amount;
+
+      public PeercoinScanResult(Address address, Long amount) {
+         this.address = address;
+         this.amount = amount;
+      }
+   }
+
+   public static PeercoinScanResult parseScanResult(final Intent intent, NetworkParameters network) {
+      if (!("QR_CODE".equals(intent.getStringExtra("SCAN_RESULT_FORMAT")))) {
+         return null;
+      }
+      String contents = intent.getStringExtra("SCAN_RESULT").trim();
+
+      // Determine address string and amount
+      if (contents.matches("[a-zA-Z0-9]*")) {
+         // Raw format
+         Address address = Address.fromString(contents.trim(), network);
+         if (address == null) {
+            return null;
+         }
+         return new PeercoinScanResult(address, null);
+      } else {
+         PeercoinUri b = PeercoinUri.parse(contents, network);
+         if (b != null) {
+            // On URI format
+            return new PeercoinScanResult(b.address, b.amount);
+         }
+      }
+
+      return null;
+   }
+
+
    public static class BitcoinScanResult {
       public Address address;
       public Long amount;

@@ -117,7 +117,7 @@ public class Address implements Serializable, Comparable<Address> {
    }
 
    /**
-    * Construct a Bitcoin address from an array of bytes containing both the
+    * Construct a Peercoin address from an array of bytes containing both the
     * address version and address bytes, but without the checksum (1 + 20 = 21
     * bytes).
     *
@@ -129,7 +129,7 @@ public class Address implements Serializable, Comparable<Address> {
    }
 
    /**
-    * Construct a Bitcoin address from an array of bytes and the string
+    * Construct a Peercoin address from an array of bytes and the string
     * representation of the address. The byte array contains both the address
     * version and address bytes, but without the checksum (1 + 20 = 21 bytes).
     * <p/>
@@ -137,7 +137,7 @@ public class Address implements Serializable, Comparable<Address> {
     * representation match.
     *
     * @param bytes         containing the full address representation 1 + 20 bytes.
-    * @param stringAddress the string representation of a Bitcoin address
+    * @param stringAddress the string representation of a Peercoin address
     */
    public Address(byte[] bytes, String stringAddress) {
       _bytes = bytes;

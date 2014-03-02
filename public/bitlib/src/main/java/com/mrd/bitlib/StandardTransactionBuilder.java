@@ -40,8 +40,9 @@ import com.mrd.bitlib.util.Sha256Hash;
 
 public class StandardTransactionBuilder {
 
-   public static final long MINIMUM_MINER_FEE = 10000;
-   public static final long MINIMUM_OUTPUT_VALUE = 5430;
+   public static final long MINIMUM_MINER_FEE = 1000000; //Changed to min fee of Peercoin
+   //public static final long MINIMUM_OUTPUT_VALUE = 5430; //original
+   public static final long MINIMUM_OUTPUT_VALUE = MINIMUM_MINER_FEE; //Since the minimum miner fee is the minimum output value for peercoin
 
    public static class InsufficientFundsException extends Exception {
       //todo consider refactoring this into a composite return value instead of an exception. it is not really "exceptional"
@@ -51,7 +52,7 @@ public class StandardTransactionBuilder {
       public long fee;
 
       public InsufficientFundsException(long sending, long fee) {
-         super("Insufficient funds to send " + sending + " satoshis with fee " + fee);
+         super("Insufficient funds to send " + sending + " peers with fee " + fee);
          this.sending = sending;
          this.fee = fee;
       }
@@ -66,7 +67,7 @@ public class StandardTransactionBuilder {
 
       public OutputTooSmallException(long value) {
          super("An output was added with a value of " + value
-               + " satoshis, which is smaller than the minimum accepted by the Bitcoin network");
+               + " peers, which is smaller than the minimum accepted by the Peercoin network");
       }
 
    }

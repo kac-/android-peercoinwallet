@@ -48,7 +48,7 @@ import com.google.common.base.Preconditions;
 import com.mrd.bitlib.crypto.InMemoryPrivateKey;
 import com.mrd.bitlib.model.Address;
 import com.mrd.bitlib.model.NetworkParameters;
-import com.mycelium.wallet.BitcoinUri;
+import com.mycelium.wallet.PeercoinUri;
 import com.mycelium.wallet.Constants;
 import com.mycelium.wallet.MbwManager;
 import com.mycelium.wallet.R;
@@ -129,7 +129,7 @@ public class StartupActivity extends Activity {
       @Override
       public void run() {
          // Check whether we should handle this intent in a special way if it
-         // has a bitcoin URI in it
+         // has a peercoin URI in it
          MbwManager mbwManager = MbwManager.getInstance(StartupActivity.this.getApplication());
          if (handleIntent(mbwManager)) {
             return;
@@ -185,20 +185,20 @@ public class StartupActivity extends Activity {
       final Uri intentUri = intent.getData();
       final String scheme = intentUri != null ? intentUri.getScheme() : null;
 
-      if (Intent.ACTION_VIEW.equals(action) && intentUri != null && "bitcoin".equals(scheme)) {
-         // We have been launched by a Bitcoin URI
+      if (Intent.ACTION_VIEW.equals(action) && intentUri != null && "peercoin".equals(scheme)) {
+         // We have been launched by a Peercoin URI
 
-         BitcoinUri b = BitcoinUri.parse(intentUri.toString(), mbwManager.getNetwork());
+         PeercoinUri b = PeercoinUri.parse(intentUri.toString(), mbwManager.getNetwork());
          if (b == null) {
-            // Invalid Bitcoin URI
-            Toast.makeText(this, R.string.invalid_bitcoin_uri, Toast.LENGTH_LONG).show();
+            // Invalid Peercoin URI
+            Toast.makeText(this, R.string.invalid_peercoin_uri, Toast.LENGTH_LONG).show();
             finish();
             return true;
          }
 
          Address receivingAddress = b.address;
          if (receivingAddress == null) {
-            Toast.makeText(this, R.string.invalid_bitcoin_uri, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.invalid_peercoin_uri, Toast.LENGTH_LONG).show();
             finish();
             return true;
          }
@@ -217,7 +217,7 @@ public class StartupActivity extends Activity {
          return true;
       }
 
-      // The intent was not a Bitcoin URI
+      // The intent was not a Peercoin URI
       return false;
    }
 

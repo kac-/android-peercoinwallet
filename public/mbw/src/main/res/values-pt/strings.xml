@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">Seleccione a origem para a obtenção de taxas de câmbio entre Peercoin e a moeda pretendida</string>
   <string name="pref_bitcoin_denomination">Denominação Peercoin</string>
   <string name="pref_bitcoin_denomination_with_denomination">Denominação (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">Defina a denominação Peercoin preferida. BTC, mBTC ou μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">Defina a denominação Peercoin preferida. PPC, mPPC ou μPPC</string>
   <string name="pref_expert_mode">Modo avançado</string>
   <string name="pref_expert_mode_summary">Activar o modo avançado possibilita características adicionais, incluindo gestão avançada de chaves e múltiplas carteiras</string>
   <string name="pref_advanced_settings">Definições avançadas</string>

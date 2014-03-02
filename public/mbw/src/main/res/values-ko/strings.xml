@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">비트코인과 명목화폐 간의 교환율을 얻기 위해 소스를 선택</string>
   <string name="pref_bitcoin_denomination">비트코인 금액단위</string>
   <string name="pref_bitcoin_denomination_with_denomination">금액단위 (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">비트코인 금액단위 설정하기.  BTC, mBTC, 또는 μBTC </string>
+  <string name="pref_bitcoin_denomination_summary">비트코인 금액단위 설정하기.  PPC, mPPC, 또는 μPPC </string>
   <string name="pref_expert_mode">전문가 모드</string>
   <string name="pref_expert_mode_summary">멀티 지갑, 더 발전된 키 관리등이 포함된 추가 기능을 원하시면 전문가 모드를 사용 하십시요</string>
   <string name="pref_advanced_settings">고급 설정</string>

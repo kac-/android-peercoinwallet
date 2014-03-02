@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">选择获得比特币和法定货币之间的汇率</string>
   <string name="pref_bitcoin_denomination">比特币面额</string>
   <string name="pref_bitcoin_denomination_with_denomination">面额  （%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">设置首选的比特币面额：BTC，mBTC，或 μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">设置首选的比特币面额：PPC，mPPC，或 μPPC</string>
   <string name="pref_expert_mode">专家模式</string>
   <string name="pref_expert_mode_summary">启用专家模式开辟了附加功能，包括先进的密钥管理和多个钱包</string>
   <string name="pref_advanced_settings">高级设置</string>

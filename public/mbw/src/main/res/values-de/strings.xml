@@ -109,7 +109,7 @@ Schlüsseln und das Ändern des PIN-Codes verbietet
   <string name="pref_exchange_source_summary">Wählen Sie den Marktplatz von dem Sie die Wechselkurse von Peercoin zu gängigen Währungen bekommen möchten</string>
   <string name="pref_bitcoin_denomination">Peercoin-Nennwert</string>
   <string name="pref_bitcoin_denomination_with_denomination">Bezeichnung (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">Zwischen BTC, mBTC, and μBtc wechseln</string>
+  <string name="pref_bitcoin_denomination_summary">Zwischen PPC, mPPC, and μBtc wechseln</string>
   <string name="pref_expert_mode">Experten-Modus</string>
   <string name="pref_expert_mode_summary">Im Expertenmodus sind zusätzliche Features verfügbar, darunter erweiterte Schlüsselverwaltung und Zugriff auf mehrere Wallets</string>
   <string name="pref_advanced_settings">Erweiterte Einstellungen</string>

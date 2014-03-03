@@ -239,7 +239,7 @@ public class ExportDistiller {
       fromTop += 0.8F;
 
       // Description 1
-      writer.addText(1F, fromTop, 12, "This document contains encrypted Bitcoin private keys. To access the bitcoins");
+      writer.addText(1F, fromTop, 12, "This document contains encrypted Bitcoin private keys. To access the peercoins");
       fromTop += 0.5F;
       writer.addText(1F, fromTop, 12,
             "controlled by these private keys you need to import them into the Mycelium Bitcoin");
@@ -250,7 +250,7 @@ public class ExportDistiller {
       writer.addText(1F, fromTop, 12, "this document are password protected. The password was shown on display while");
       fromTop += 0.5F;
       writer.addText(1F, fromTop, 12,
-            "creating the backup. It is not possible to access the bitcoins without the password.");
+            "creating the backup. It is not possible to access the peercoins without the password.");
       fromTop += 1F;
 
       // Description 2
@@ -381,7 +381,7 @@ public class ExportDistiller {
 
       // Titles
       writer.setTextColor(0, 0, 0);
-      writer.addText(3F, fromTop, 13, "Bitcoin Address");
+      writer.addText(3F, fromTop, 13, "Peercoin Address");
       if (hasEpk) {
          writer.addText(12F, fromTop, 13, "Encrypted Private Key");
       }
@@ -391,7 +391,7 @@ public class ExportDistiller {
       // Bitmap addressQr = Utils.getQRCodeBitmap("bitcoin:" + address, 200, 0);
       // writer.addImage(2.9, fromTop, 3.5, 3.5, addressQr);
 
-      writer.addQrCode(2.9, fromTop - 0.25, 3.5, "bitcoin:" + address);
+      writer.addQrCode(2.9, fromTop - 0.25, 3.5, "peercoin:" + address);
 
       progressTracker.addressCompleted();
       // Encrypted private key QR-code
@@ -497,10 +497,10 @@ public class ExportDistiller {
    private static final String DECRYPT_7 = "The 32 byte private key is the concatenation of P1 and P2: P = P1 || P2";
 
    private static final String GENERATE_ADDRESS_HEADING = "Generating the Bitcoin Address";
-   private static final String GENERATE_ADDRESS_DESC = "For each bitcoin private key there are two public keys. A compressed public key and an uncompressed public key. As each public key gives a different bitcoin address it is important to use the right one. The right public key to use is encoded in the header (compressed). Bitcoin addresses for the test network are different from the production (real) network. The network that this private key is for is encoded in the header (network).";
+   private static final String GENERATE_ADDRESS_DESC = "For each peercoin private key there are two public keys. A compressed public key and an uncompressed public key. As each public key gives a different peercoin address it is important to use the right one. The right public key to use is encoded in the header (compressed). Bitcoin addresses for the test network are different from the production (real) network. The network that this private key is for is encoded in the header (network).";
 
    private static final String VERIFY_HEADING = "Verifying the Checksum";
-   private static final String VERIFY_1 = "Convert the generated bitcoin address to an array of ASCII bytes";
+   private static final String VERIFY_1 = "Convert the generated peercoin address to an array of ASCII bytes";
    private static final String VERIFY_2 = "Do a single SHA256 operation on the array of bytes";
    private static final String VERIFY_3 = "The checksum is the first 4 bytes of the output";
    private static final String VERIFY_4 = "Verify that the calculated checksum equals C.";

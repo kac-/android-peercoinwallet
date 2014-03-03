@@ -50,7 +50,7 @@ import com.mrd.bitlib.crypto.MrdExport;
 import com.mrd.bitlib.crypto.MrdExport.DecodingException;
 import com.mrd.bitlib.crypto.MrdExport.V1.EncryptionParameters;
 import com.mrd.bitlib.crypto.MrdExport.V1.InvalidChecksumException;
-import com.mycelium.wallet.BitcoinUri;
+import com.mycelium.wallet.PeercoinUri;
 import com.mycelium.wallet.MbwManager;
 import com.mycelium.wallet.R;
 import com.mycelium.wallet.Record;
@@ -240,9 +240,9 @@ public class ScanActivity extends Activity {
       Record record = Record.fromString(contents, _mbwManager.getNetwork());
 
       if (record != null) {
-         // The scan result might actually be a bitcoin URI, so try to create
+         // The scan result might actually be a peercoin URI, so try to create
          // one and pass the result along
-         BitcoinUri uri = BitcoinUri.parse(contents, _mbwManager.getNetwork());
+         PeercoinUri uri = PeercoinUri.parse(contents, _mbwManager.getNetwork());
          finishOk(record, uri);
          return;
       }
@@ -286,7 +286,7 @@ public class ScanActivity extends Activity {
          try {
             String key = MrdExport.V1.decrypt(encryptionParameters, encryptedPrivateKey, _mbwManager.getNetwork());
             Record record = Preconditions.checkNotNull(Record.fromString(key, _mbwManager.getNetwork()));
-            finishOk(record, new BitcoinUri(record.address, null, null));
+            finishOk(record, new PeercoinUri(record.address, null, null));
             return;
          } catch (InvalidChecksumException e) {
             // We cannot reuse the cached password, fall through and decrypt
@@ -314,13 +314,13 @@ public class ScanActivity extends Activity {
       _mbwManager.setCachedEncryptionParameters(encryptionParameters);
       // Add the key
       Record record = Preconditions.checkNotNull(Record.fromString(key, _mbwManager.getNetwork()));
-      finishOk(record, new BitcoinUri(record.address, null, null));
+      finishOk(record, new PeercoinUri(record.address, null, null));
    }
 
    private void handleDecryptedBip38PrivateKey(Intent intent) {
       String key = intent.getStringExtra("base58Key");
       Record record = Preconditions.checkNotNull(Record.fromString(key, _mbwManager.getNetwork()));
-      finishOk(record, new BitcoinUri(record.address, null, null));
+      finishOk(record, new PeercoinUri(record.address, null, null));
    }
 
    private void finishError(int resId, String payload) {
@@ -331,10 +331,10 @@ public class ScanActivity extends Activity {
       finish();
    }
 
-   private void finishOk(Record record, BitcoinUri bitcoinUri) {
+   private void finishOk(Record record, PeercoinUri peercoinUri) {
       Intent result = new Intent();
       result.putExtra(RESULT_RECORD_KEY, record);
-      result.putExtra(RESULT_URI_KEY, bitcoinUri);
+      result.putExtra(RESULT_URI_KEY, peercoinUri);
       setResult(RESULT_OK, result);
       finish();
    }

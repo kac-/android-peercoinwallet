@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">Seleccione a origem para a obtenção de taxas de câmbio entre Peercoin e a moeda pretendida</string>
   <string name="pref_bitcoin_denomination">Denominação Peercoin</string>
   <string name="pref_bitcoin_denomination_with_denomination">Denominação (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">Defina a denominação Peercoin preferida. BTC, mBTC ou μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">Defina a denominação Peercoin preferida. PPC, mPPC ou μPPC</string>
   <string name="pref_expert_mode">Modo avançado</string>
   <string name="pref_expert_mode_summary">Activar o modo avançado possibilita características adicionais, incluindo gestão avançada de chaves e múltiplas carteiras</string>
   <string name="pref_advanced_settings">Definições avançadas</string>
@@ -133,9 +133,9 @@
   <string name="payment_request">Pedir pagamento</string>
   <string name="show_to_sender">Mostrar ao remetente</string>
   <string name="bitcoin_address_label">Endereço Peercoin:</string>
-  <string name="export_single_private_key_warning">Está prestes a exportar a chave privada que controla todas as bitcoins dos endereços seleccionados.\n\nQualquer pessoa que ganhe acesso a esta chave pode tomar posse de de todas as bitcoins que esta controla.\n\nDeseja continuar?</string>
+  <string name="export_single_private_key_warning">Está prestes a exportar a chave privada que controla todas as peercoins dos endereços seleccionados.\n\nQualquer pessoa que ganhe acesso a esta chave pode tomar posse de de todas as peercoins que esta controla.\n\nDeseja continuar?</string>
   <string name="backup_single_private_key_warning">Você está prestes a fazer uma cópia de segurança da chave privada que controla todas as Peercoins da sua carteira Mycelium.\n\nQualquer pessoa que ganhe acesso a esta chave poderá tomar todas as suas Peercoins.\n\nDeseja continuar?</string>
-  <string name="backup_all_warning">Está prestes a fazer uma cópia de segurança das chaves privadas que controlam todas as bitcoins da sua Carteira Peercoin Mycelium.\n\nQualquer pessoa que obtenha acesso a estas chaves poderá transferir as suas moedas.\n\nDeseja continuar?</string>
+  <string name="backup_all_warning">Está prestes a fazer uma cópia de segurança das chaves privadas que controlam todas as peercoins da sua Carteira Peercoin Mycelium.\n\nQualquer pessoa que obtenha acesso a estas chaves poderá transferir as suas moedas.\n\nDeseja continuar?</string>
   <string name="export_to_clipboard_warning">Aviso: Exportar a chave privada para a área de transferência irá expô-la a todas as outras aplicações do seu dispositivo.\n\nNota: Não basta copiar a chave privada para a área de transferência, têm também de a salvar num local seguro.\n\nDeseja continuar?</string>
   <string name="found_clipboard_private_key_title">Chave Privada Encontrada na Área de Transferência</string>
   <string name="found_clipboard_private_keys_message">A área de transferência contém uma chave privada.\r\nDeseja apaga-la?</string>
@@ -239,7 +239,7 @@
   <string name="address_already_exists">Este endereço já faz parte da sua carteira.\n\nVocê não pode adiciona-lo ao seu livro de endereços.</string>
   <string name="add_dialog_title">Adicionar Endereço</string>
   <string name="add_key">Adicionar Chave</string>
-  <string name="export_private_key_warning">Atenção. Está prestes a exportar a chave privada que controla todas as bitcoins dos endereços seleccionados.\n\nQualquer pessoa que ganhe acesso a esta chave pode tomar posse de de todas as bitcoins que esta controla.\n\nDeseja continuar?</string>
+  <string name="export_private_key_warning">Atenção. Está prestes a exportar a chave privada que controla todas as peercoins dos endereços seleccionados.\n\nQualquer pessoa que ganhe acesso a esta chave pode tomar posse de de todas as peercoins que esta controla.\n\nDeseja continuar?</string>
   <string name="page_locked">Esta página está bloqueada</string>
   <string name="unlock_label">Desbloquear</string>
   <string name="lock_label">Bloquear</string>

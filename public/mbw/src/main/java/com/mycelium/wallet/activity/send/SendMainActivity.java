@@ -57,7 +57,7 @@ import com.mrd.bitlib.crypto.PrivateKeyRing;
 import com.mrd.bitlib.model.Address;
 import com.mrd.bitlib.model.Transaction;
 import com.mrd.bitlib.model.UnspentTransactionOutput;
-import com.mycelium.wallet.BitcoinUri;
+import com.mycelium.wallet.PeercoinUri;
 import com.mycelium.wallet.MbwManager;
 import com.mycelium.wallet.R;
 import com.mycelium.wallet.Record;
@@ -165,7 +165,7 @@ public class SendMainActivity extends Activity {
 
       // Amount Hint
       ((TextView) findViewById(R.id.tvAmount)).setHint(getResources().getString(R.string.amount_hint_denomination,
-            _mbwManager.getBitcoinDenomination().toString()));
+            _mbwManager.getPeercoinDenomination().toString()));
 
    }
 
@@ -206,7 +206,7 @@ public class SendMainActivity extends Activity {
 
       @Override
       public void onClick(View arg0) {
-         BitcoinUri uri = getUriFromClipboard();
+         PeercoinUri uri = getUriFromClipboard();
          if (uri != null) {
             Toast.makeText(SendMainActivity.this, getResources().getString(R.string.using_address_from_clipboard),
                   Toast.LENGTH_SHORT).show();
@@ -473,7 +473,7 @@ public class SendMainActivity extends Activity {
          if (resultCode == RESULT_OK) {
 
             Record record = (Record) intent.getSerializableExtra(ScanActivity.RESULT_RECORD_KEY);
-            BitcoinUri uri = (BitcoinUri) intent.getSerializableExtra(ScanActivity.RESULT_URI_KEY);
+            PeercoinUri uri = (PeercoinUri) intent.getSerializableExtra(ScanActivity.RESULT_URI_KEY);
             if (uri != null) {
                _receivingAddress = uri.address;
                if (uri.amount != null && _amountToSend == null) {
@@ -517,7 +517,7 @@ public class SendMainActivity extends Activity {
       updateUi();
    }
 
-   private BitcoinUri getUriFromClipboard() {
+   private PeercoinUri getUriFromClipboard() {
       String content = Utils.getClipboardString(SendMainActivity.this);
       if (content.length() == 0) {
          return null;
@@ -529,9 +529,9 @@ public class SendMainActivity extends Activity {
          if (address == null){
             return null;
          }
-         return new BitcoinUri(address,null,null);
+         return new PeercoinUri(address,null,null);
       } else {
-         BitcoinUri b = BitcoinUri.parse(string, _mbwManager.getNetwork());
+         PeercoinUri b = PeercoinUri.parse(string, _mbwManager.getNetwork());
          if (b != null) {
             // On URI format
             return b;

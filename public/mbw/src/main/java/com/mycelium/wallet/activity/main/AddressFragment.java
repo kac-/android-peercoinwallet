@@ -128,7 +128,7 @@ public class AddressFragment extends Fragment {
 
       // Update address
       Address address = getRecord().address;
-      // Show name of bitcoin address according to address book
+      // Show name of peercoin address according to address book
       TextView tvAddressTitle = (TextView) _root.findViewById(R.id.tvAddressLabel);
       String name = getMbwManager().getAddressBookManager().getNameByAddress(address.toString());
       if (name.length() == 0) {
@@ -146,7 +146,7 @@ public class AddressFragment extends Fragment {
    }
 
    private String getUri() {
-      return "bitcoin:" + getRecord().address.toString();
+      return "peercoin:" + getRecord().address.toString();
    }
 
    private class QrClickListener implements OnClickListener {

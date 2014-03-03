@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">בחר את המקור לקבלת שער המרה בין ביטקוין לבין מטבעות פיאט</string>
   <string name="pref_bitcoin_denomination">דנומנצית ביטקוין</string>
   <string name="pref_bitcoin_denomination_with_denomination">דנוצמנציה(%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">בחר דנומנצית ביטקוין מועדפת. BTC, mBTC, או μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">בחר דנומנצית ביטקוין מועדפת. PPC, mPPC, או μPPC</string>
   <string name="pref_expert_mode">מצב מומחה</string>
   <string name="pref_expert_mode_summary">הפעלת מצב מומחה מאפשר אפשרויות נוספות מתקדמות לניהול מפתחות וריבוי ארנקים</string>
   <string name="pref_advanced_settings">הגדרות מתקדמות</string>

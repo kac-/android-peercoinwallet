@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">Выберите источник для получения обменного курса между биткойном и фиатными  валютами</string>
   <string name="pref_bitcoin_denomination">Номинал биткойна</string>
   <string name="pref_bitcoin_denomination_with_denomination">Номинал (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">Установите предпочтительную форму  деноминации биткойна. BTC, mBTC или μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">Установите предпочтительную форму  деноминации биткойна. PPC, mPPC или μPPC</string>
   <string name="pref_expert_mode">Экспертный режим</string>
   <string name="pref_expert_mode_summary"> Позволяет  расширенное управление ключами и несколькими адресами.</string>
   <string name="pref_advanced_settings">Расширенные настройки</string>

@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">Sélectionnez la bourse afin d\'obtention de taux de change entre le Peercoin et votre devise</string>
   <string name="pref_bitcoin_denomination">Dénomination du Peercoin</string>
   <string name="pref_bitcoin_denomination_with_denomination">Dénomination (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">Définir la dénomination du Peercoin : BTC, mBTC ou μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">Définir la dénomination du Peercoin : PPC, mPPC ou μPPC</string>
   <string name="pref_expert_mode">Mode avancé</string>
   <string name="pref_expert_mode_summary">Le mode avancé déploie des fonctionnalités supplémentaires sur la gestion des clés et multiple portefeuilles</string>
   <string name="pref_advanced_settings">Paramètres avancés</string>

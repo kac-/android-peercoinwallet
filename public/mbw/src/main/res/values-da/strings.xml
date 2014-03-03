@@ -107,7 +107,7 @@
   <string name="pref_exchange_source_summary">Vælg kilde for opslag af valutakurser for konvertering mellem Peercoin og fiat valuta</string>
   <string name="pref_bitcoin_denomination">Peercoin enhed</string>
   <string name="pref_bitcoin_denomination_with_denomination">Pålydende værdi (%1$s)</string>
-  <string name="pref_bitcoin_denomination_summary">Angiv foretrukne Peercoin enhed. BTC, mBTC eller μBTC</string>
+  <string name="pref_bitcoin_denomination_summary">Angiv foretrukne Peercoin enhed. PPC, mPPC eller μPPC</string>
   <string name="pref_expert_mode">Ekspert Mode</string>
   <string name="pref_expert_mode_summary">Aktivering af ekspert mode åbner op for ekstra funktioner, herunder avanceret nøglehåndtering og flere tegnebøger</string>
   <string name="pref_advanced_settings">Avancerede Indstillinger</string>

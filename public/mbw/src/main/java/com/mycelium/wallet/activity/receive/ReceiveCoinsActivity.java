@@ -164,7 +164,7 @@ public class ReceiveCoinsActivity extends Activity {
    }
 
    private String getPaymentUri() {
-      final StringBuilder uri = new StringBuilder("bitcoin:" + receivingAddress.address.toString());
+      final StringBuilder uri = new StringBuilder("peercoin:" + receivingAddress.address.toString());
       if (_amount != null) {
          uri.append("?amount=").append(CoinUtil.valueString(_amount, false));
       }

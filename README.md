@@ -1,6 +1,17 @@
 Peercoin Android Wallet ported from Mycelium Bitcoin Wallet
 ============================================================
 
+The project isn't active at the moment ( see https://github.com/FuzzyBearBTC/android-peercoinwallet/issues/13 ).
+
+We are waiting on upstream to start adding more coins, at which point the funds of peer4commit will be used
+to help upstream to add Peercoin.
+
+
+Please wait with pull requests/work until upstream starts work on adding more coins.
+
+============================================================
+
+
 NOTE: Currently this is still the Bitcoin Android Wallet the Peercoin Wallet is in 
 development.
 

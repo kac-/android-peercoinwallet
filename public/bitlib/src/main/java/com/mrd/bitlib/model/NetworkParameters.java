@@ -26,7 +26,7 @@ import com.mrd.bitlib.util.HexUtils;
 public class NetworkParameters implements Serializable {
    private static final long serialVersionUID = 1L;
 
-   public static final int PROTOCOL_VERSION = 70001;
+   public static final int PROTOCOL_VERSION = 60004;
    public static final NetworkParameters testNetwork;
    public static final NetworkParameters productionNetwork;
    private static byte[] TESTNET_GENESIS_BLOCK;
@@ -74,22 +74,22 @@ public class NetworkParameters implements Serializable {
 
    private NetworkParameters(boolean isProdnet) {
       if (isProdnet) {
-         _standardAddressHeader = 0x00;
-         _multisigAddressHeader = 0x05;
+         _standardAddressHeader = 55;
+         _multisigAddressHeader = 117;
          _genesisBlock = PRODNET_GENESIS_BLOCK;
-         _port = 8333;
-         _packetMagic = 0xf9beb4d9;
-         _packetMagicBytes = new byte[] { (byte) 0xf9, (byte) 0xbe, (byte) 0xb4, (byte) 0xd9 };
+         _port = 9901;
+         _packetMagic = 0xe6e8e9e5;
+         _packetMagicBytes = new byte[] { (byte) 0xe6, (byte) 0xe8, (byte) 0xe9, (byte) 0xe5 };
       } else {
-         _standardAddressHeader = 0x6F;
-         _multisigAddressHeader = 0xC4;
+         _standardAddressHeader = 111;
+         _multisigAddressHeader = 196;
          _genesisBlock = TESTNET_GENESIS_BLOCK;
-         _port = 18333;
+         _port = 9903;
          // _packetMagic = 0xfabfb5da;
-         _packetMagic = 0x0b110907;
+         _packetMagic = 0xcbf2c0ef;
          // _packetMagicBytes = new byte[] { (byte) 0xfa, (byte) 0xbf, (byte)
          // 0xb5, (byte) 0xda };
-         _packetMagicBytes = new byte[] { (byte) 0x0b, (byte) 0x11, (byte) 0x09, (byte) 0x07 };
+         _packetMagicBytes = new byte[] { (byte) 0xcb, (byte) 0xf2, (byte) 0xc0, (byte) 0xef };
       }
    }
 
